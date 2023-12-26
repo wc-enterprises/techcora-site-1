@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+}
+#heropage {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  flex-direction: column;
+  background: url(/assets/hero-img.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.add-background-color {
+  background-color: #1a5965;
+
+  transition: background-color 1s ease;
+}
+.hero-container {
+  display: flex;
+  padding: 20px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+.hero-head {
+  width: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+.hero-cont {
+  align-self: stretch;
+  text-align: center;
+  color: #a78bfa;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+.hero-cont a {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.hero-cont1 a {
+  color: #a78bfa;
+}
+.hero-cont1 {
+  align-self: stretch;
+  color: #fff;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0.74px;
+}
+
+.hero-container button {
+  display: flex;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 8px;
+  background: linear-gradient(
+    163deg,
+    #a78bfa -28.29%,
+    rgba(167, 139, 250, 0) 129.23%
+  );
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-family: League Spartan;
+}
+.our-service {
+  display: flex;
+  width: 100%;
+  padding: 80px 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background: #000;
+}
+.our-service-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 65%;
+}
+.our-service-head {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+.our-service-head a {
+  color: #a78bfa;
+  text-align: center;
+}
+.our-service-cont {
+  color: #fff;
+  text-align: center;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0.24px;
+}
+.our-service-cont a {
+  color: #a78bfa;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 82%;
+}
+
+.grid-box {
+  text-align: center;
+  display: flex;
+  padding: 20px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  border-radius: 10px;
+  border: 1px solid #aa8df6;
+  background: linear-gradient(180deg, #452e7b 0%, rgba(69, 46, 123, 0) 100%);
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+}
+.grid-box img {
+  width: 45px;
+  height: 45px;
+}
+.grid-para {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.grid-para1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+}
+.grid-para2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.36px;
+  text-align: left;
+}
+.aboutus {
+  display: flex;
+  width: 100%;
+  padding: 80px 100px;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  gap: 50px;
+  box-sizing: border-box;
+}
+.aboutus-container {
+  display: flex;
+  width: 725px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #a78bfa;
+
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+}
+.aboutus-head {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  align-self: stretch;
+}
+.aboutus-head a {
+  color: #a78bfa;
+}
+.about-us-img {
+  display: none;
+}
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+.aboutus-content span {
+  align-self: stretch;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.36px;
+}
+.aboutus-img {
+  width: 460px;
+  height: 625px;
+  flex-shrink: 0;
+  border-radius: 15px;
+}
+@media (max-width: 426px) {
+  .hero-container {
+    padding: 20px 20px;
+    gap: 18px;
+  }
+  .hero-head {
+    width: 100%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 28px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 20px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .our-service {
+    padding: 50px 25px;
+    gap: 25px;
+  }
+  .our-service-sec {
+    gap: 15px;
+    width: 100%;
+  }
+  .our-service-head {
+    font-size: 24px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 20px;
+  }
+  .grid-box img {
+    width: 35px;
+    height: 35px;
+  }
+  .grid-para {
+    gap: 14px;
+  }
+  .grid-para1 {
+    font-size: 18px;
+  }
+  .grid-para2 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .hero-container {
+    padding: 20px 40px;
+    gap: 22px;
+  }
+  .hero-head {
+    width: 100%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 30px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+  }
+  .our-service {
+    padding: 60px 40px;
+    gap: 35px;
+  }
+  .our-service-sec {
+    gap: 18px;
+    width: 85%;
+  }
+  .our-service-head {
+    font-size: 26px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 20px;
+  }
+  .grid-box img {
+    width: 35px;
+    height: 35px;
+  }
+  .grid-para {
+    gap: 14px;
+  }
+  .grid-para1 {
+    font-size: 20px;
+  }
+  .grid-para2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .hero-container {
+    padding: 20px 40px;
+    gap: 22px;
+  }
+  .hero-head {
+    width: 75%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 32px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 25px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: row;
+  }
+  .our-service {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+  .our-service-sec {
+    gap: 25px;
+    width: 75%;
+  }
+  .our-service-head {
+    font-size: 30px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 25px;
+  }
+  .grid-box img {
+    width: 40px;
+    height: 40px;
+  }
+  .grid-para {
+    gap: 18px;
+  }
+  .grid-para1 {
+    font-size: 22px;
+  }
+  .grid-para2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .aboutus {
+    width: 100%;
+    padding: 60px 50px;
+    gap: 50px;
+  }
+  .aboutus-container {
+    width: 90%;
+    padding: 40px;
+    gap: 25px;
+  }
+  .aboutus-head {
+    font-size: 35px;
+    line-height: 39px;
+  }
+  .about-us-img {
+    display: block;
+    width: 100%;
+    height: 352px;
+    flex-shrink: 0;
+    border-radius: 15px;
+  }
+  .about-us-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .aboutus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+  }
+  .aboutus-content span {
+    align-self: stretch;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.36px;
+  }
+  .aboutus-img {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+<div class="nav-container">
+  <div [routerLink]="['/']" class="logo-container" style="cursor: pointer">
+    <img src="/assets/logo.svg" alt="logo" />
+    <span> <a>TECH</a>CORA </span>
+  </div>
+  <!--Laptop screen nav content-->
+  <div id="sidemenu">
+    <span class="sidemenucont" routerLinkActive="active">
+      <a [routerLink]="['/projectsec']">Our services</a>
+    </span>
+    <span class="sidemenucont" routerLinkActive="active">
+      <a [routerLink]="['/our-service']">About us</a>
+    </span>
+    <span class="sidemenucont" routerLinkActive="active">
+      <a [routerLink]="['/contact']">Contact</a>
+    </span>
+
+    <img
+      id="menu-icon"
+      style="cursor: pointer"
+      (click)="openNav()"
+      src="/assets/menu-icon.svg"
+      alt="menu-icon"
+    />
+  </div>
+  <!--Side nav for mobile and tab-->
+  <div id="mySidenav" class="sidenav" [style.width.px]="sidenavWidth">
+    <a class="closebtn" (click)="closeNav()">&times;</a>
+    <a [routerLink]="['/projectsec']">Our services</a>
+    <a [routerLink]="['/our-service']">About us</a>
+    <a [routerLink]="['/contact']">Contact</a>
+  </div>
+</div>
