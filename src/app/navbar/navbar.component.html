@@ -1,18 +1,18 @@
 <div class="nav-container">
-  <div [routerLink]="['/']" class="logo-container" style="cursor: pointer">
+  <div href="#heropage" class="logo-container" style="cursor: pointer">
     <img src="/assets/logo.svg" alt="logo" />
     <span> <a>TECH</a>CORA </span>
   </div>
   <!--Laptop screen nav content-->
   <div id="sidemenu">
     <span class="sidemenucont" routerLinkActive="active">
-      <a [routerLink]="['/projectsec']">Our services</a>
+      <a (click)="closeNavAndScroll('ourServices')">Our services</a>
     </span>
     <span class="sidemenucont" routerLinkActive="active">
-      <a [routerLink]="['/our-service']">About us</a>
+      <a (click)="closeNavAndScroll('aboutUs')">About us</a>
     </span>
     <span class="sidemenucont" routerLinkActive="active">
-      <a [routerLink]="['/contact']">Contact</a>
+      <a (click)="closeNavAndScroll('contact')">Contact</a>
     </span>
 
     <img
@@ -26,8 +26,8 @@
   <!--Side nav for mobile and tab-->
   <div id="mySidenav" class="sidenav" [style.width.px]="sidenavWidth">
     <a class="closebtn" (click)="closeNav()">&times;</a>
-    <a [routerLink]="['/projectsec']">Our services</a>
-    <a [routerLink]="['/our-service']">About us</a>
-    <a [routerLink]="['/contact']">Contact</a>
+    <a (click)="closeNavAndScroll('ourServices')">Our services</a>
+    <a (click)="closeNavAndScroll('aboutUs')">About us</a>
+    <a (click)="closeNavAndScroll('contact')">Contact</a>
   </div>
 </div>

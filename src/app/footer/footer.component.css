@@ -1,12 +1,11 @@
 .footer {
-  height: 60px;
+  height: 70px;
   box-sizing: border-box;
   display: flex;
   width: 100%;
   padding: 17px 50px;
   justify-content: space-between;
   align-items: center;
-  background: #000;
 }
 .footer-cont-box {
   color: #a78bfa;
@@ -25,6 +24,16 @@
   align-items: flex-end;
   gap: 7px;
 }
+.footer-socialimg-box img {
+  width: 25px; /* Adjust the width based on your design */
+  height: 25px; /* Adjust the height based on your design */
+  transition: transform 0.5s ease-in-out;
+}
+
+.footer-socialimg-box img:hover {
+  transform: scale(1.2); /* Adjust the scale factor based on your preference */
+}
+
 @media (max-width: 426px) {
   .footer {
     height: auto;

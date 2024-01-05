@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px;
-  height: 75px;
+  height: 80px;
 }
 #sidemenu .sidemenucont.active {
   color: #cacaca;
@@ -59,11 +59,12 @@
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.36px;
+  transition: transform 0.5s ease-in-out;
 }
 .sidemenucont a:hover {
   color: #cacaca;
   border-bottom: 0.5px solid #cacaca;
-  transition: 0.5s ease-in;
+  transform: scale(1.2);
 }
 
 #menu-icon {
@@ -90,7 +91,7 @@
     z-index: 4;
     top: 0;
     right: 0;
-    background: #2c3135;
+    background: linear-gradient(180deg, #000 0%, #382664 100%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -108,7 +109,7 @@
   }
 
   .sidenav a:hover {
-    color: #ec795a;
+    color: #a78bfa;
   }
 
   .sidenav .closebtn {
@@ -163,7 +164,7 @@
     z-index: 4;
     top: 0;
     right: 0;
-    background: #2c3135;
+    background: linear-gradient(180deg, #000 0%, #382664 100%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -181,7 +182,7 @@
   }
 
   .sidenav a:hover {
-    color: #ec795a;
+    color: #a78bfa;
   }
 
   .sidenav .closebtn {
@@ -237,7 +238,7 @@
     z-index: 4;
     top: 0;
     right: 0;
-    background: #2c3135;
+    background: linear-gradient(180deg, #000 0%, #160f28 49.02%, #382664 100%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -255,7 +256,7 @@
   }
 
   .sidenav a:hover {
-    color: #ec795a;
+    color: #a78bfa;
   }
 
   .sidenav .closebtn {
@@ -311,7 +312,7 @@
     z-index: 4;
     top: 0;
     right: 0;
-    background: #2c3135;
+    background: linear-gradient(180deg, #000 0%, #382664 100%);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -329,7 +330,7 @@
   }
 
   .sidenav a:hover {
-    color: #ec795a;
+    color: #a78bfa;
   }
 
   .sidenav .closebtn {
