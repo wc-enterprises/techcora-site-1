@@ -3,6 +3,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 .nav-container {
   width: 100vw;

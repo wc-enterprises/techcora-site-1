@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ScrollColorChange } from './common-utils/background-color-change-on-scroll.directive';
 import { ScrollChangeColorDirective } from './scroll-change-color.directive';
-import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+
     <div id="heropage">
       <div style="height: 80px; width: 100%"></div>
       <app-navbar
@@ -26,7 +27,9 @@
             >
           </span>
         </div>
-        <button (click)="scrollToOurServices()">Explore</button>
+        <button (click)="scrollToOurServices()" >
+          Explore
+        </button>
       </div>
       <div style="height: 50px; width: 100%"></div>
     </div>
@@ -82,7 +85,9 @@
           >
         </div>
       </div>
-      <img class="aboutus-img" src="/assets/aboutus.svg" alt="Aboutus-img" />
+      <span class="Aboutus-img">
+        <img class="aboutus-img" src="/assets/aboutus.svg" alt="Aboutus-img" />
+      </span>
     </div>
     <div class="contactus" id="contact">
       <div class="contact-form">

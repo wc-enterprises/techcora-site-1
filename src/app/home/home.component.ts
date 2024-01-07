@@ -1,5 +1,11 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+
 interface FormData {
   name: string;
   email: string;
@@ -19,10 +25,12 @@ interface Alert {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+
   @ViewChild('ourServicesSection') ourServicesSection!: ElementRef;
 
   constructor(private renderer: Renderer2) {} // Inject Renderer2 in the constructor
   navbarHeight: number = 80;
+
   scrollToOurServices(): void {
     const element = this.ourServicesSection.nativeElement;
     if (element) {
