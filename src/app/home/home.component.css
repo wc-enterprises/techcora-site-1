@@ -1,0 +1,1009 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  background: #000;
+  width: 100vw;
+  height: auto;
+}
+.disable-click {
+  pointer-events: none;
+  user-select: none;
+}
+
+#heropage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  flex-direction: column;
+  background: url(/assets/hero-img.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.add-background-color {
+  background: #000;
+  transition: background-color 1s ease;
+}
+.hero-container {
+  display: flex;
+  padding: 20px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+.hero-head {
+  width: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+.hero-cont {
+  align-self: stretch;
+  text-align: center;
+  color: #a78bfa;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+.hero-cont a {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.hero-cont1 a {
+  color: #a78bfa;
+}
+.hero-cont1 {
+  align-self: stretch;
+  color: #e9ecef;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0.74px;
+}
+
+.hero-container button {
+  display: flex;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 139, 250, 0.5) -44.08%,
+    rgba(167, 139, 250, 0.25) 129.99%
+  );
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-family: League Spartan;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.hero-container button:hover {
+  background: #a78bfa;
+  transform: scale(1.1);
+}
+.our-service {
+  display: flex;
+  width: 100vw;
+  padding: 80px 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.our-service-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 65%;
+}
+.our-service-head {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+.our-service-head a {
+  color: #a78bfa;
+  text-align: center;
+}
+.our-service-cont {
+  color: #e9ecef;
+  text-align: center;
+  font-family: League Spartan;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0.24px;
+}
+.our-service-cont a {
+  color: #a78bfa;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 82%;
+}
+
+.grid-box {
+  text-align: center;
+  display: flex;
+  padding: 20px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  border-radius: 10px;
+  border: 1px solid #aa8df6;
+  background: linear-gradient(180deg, #452e7b 0%, rgba(69, 46, 123, 0) 100%);
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+  transition: transform 0.6s ease-in-out;
+}
+.grid-box:hover {
+  transform: scale(1.03);
+}
+.grid-box img {
+  width: 45px;
+  height: 45px;
+}
+.grid-para {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.grid-para1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+}
+.grid-para2 {
+  color: #e9ecef;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.36px;
+  text-align: left;
+}
+.aboutus {
+  display: flex;
+  width: 100vw;
+  padding: 80px 100px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+.aboutus-container {
+  display: flex;
+  width: 725px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #a78bfa;
+
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+  transition: transform 0.6s ease-in-out;
+}
+.aboutus-container:hover {
+  transform: scale(1.03);
+}
+.aboutus-head {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  align-self: stretch;
+}
+.aboutus-head a {
+  color: #a78bfa;
+}
+.about-us-img {
+  display: none;
+}
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+.aboutus-content span {
+  align-self: stretch;
+  color: #e9ecef;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.36px;
+}
+.Aboutus-img {
+  width: 460px;
+  height: 625px;
+  flex-shrink: 0;
+}
+.aboutus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.contactus {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  padding: 80px 100px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+  box-sizing: border-box;
+}
+.contact-form {
+  display: flex;
+  width: 725px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #a78bfa;
+
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+  transition: transform 0.6s ease-in-out;
+}
+.contact-form:hover {
+  transform: scale(1.03);
+}
+.contact-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+  align-self: stretch;
+}
+.contact-form-head a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.35px;
+}
+.contact-form-head {
+  color: #a78bfa;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.35px;
+}
+.contact-form-subhead {
+  align-self: stretch;
+  color: #e9ecef;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.36px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #e6e8e8;
+
+  color: #5c5c5c;
+  font-family: League Spartan;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+}
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill {
+  background-color: #e6e8e8; /* Change to the desired background color */
+  -webkit-text-fill-color: #5c5c5c; /* Set the text color for autofilled inputs */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #e6e8e8; /* Change to the desired background color */
+  outline: none; /* Remove the default focus outline if not needed */
+}
+
+.form-group textarea {
+  min-height: 150px; /* Adjust the height based on your design */
+}
+.form-field {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group span {
+  color: #d32c1ad4;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  height: auto;
+  line-height: normal;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+button[type="submit"] {
+  cursor: pointer;
+  color: #fff;
+  font-family: League Spartan;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 8px;
+  border: 0.8px solid #8b5cf6;
+  background: none;
+  display: flex;
+  padding: 18px 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #8b5cf6;
+  transition: 0.6s ease-in-out;
+}
+.contact-info-container {
+  display: flex;
+  width: 370px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  flex-shrink: 0;
+}
+.contact-info-box {
+  display: flex;
+  height: 250px;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 15px;
+  border: 1px solid #a78bfa;
+
+  background: linear-gradient(180deg, #452e7b 0%, rgba(69, 46, 123, 0) 100%);
+
+  box-shadow: 3px 3px 5px 0px #a78bfa;
+  transition: transform 0.6s ease-in-out;
+}
+.contact-info-box:hover {
+  transform: scale(1.03);
+}
+.contact-icon {
+  width: 50px;
+  height: 50px;
+}
+.contact-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+.contact-head p {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  align-self: stretch;
+}
+.contact-detail-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.contact-detail-box p {
+  color: #e9ecef;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  align-self: stretch;
+}
+@media (max-width: 426px) {
+  .hero-container {
+    padding: 20px 20px;
+    gap: 18px;
+  }
+  .hero-head {
+    width: 100%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 28px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .our-service {
+    padding: 50px 25px;
+    gap: 25px;
+  }
+  .our-service-sec {
+    gap: 15px;
+    width: 100%;
+  }
+  .our-service-head {
+    font-size: 24px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 20px;
+  }
+  .grid-box img {
+    width: 35px;
+    height: 35px;
+  }
+  .grid-para {
+    gap: 14px;
+  }
+  .grid-para1 {
+    font-size: 18px;
+  }
+  .grid-para2 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .aboutus {
+    width: 100%;
+    padding: 40px 25px;
+    gap: 50px;
+  }
+  .aboutus-container {
+    width: 100%;
+    padding: 0px;
+    gap: 18px;
+    border: none;
+    box-shadow: none;
+  }
+  .aboutus-head {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+  .about-us-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    flex-shrink: 0;
+  }
+  .about-us-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .aboutus-content {
+    gap: 10px;
+  }
+  .aboutus-content span {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .Aboutus-img {
+    display: none;
+  }
+  .contactus {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 25px;
+    gap: 40px;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 0px;
+    gap: 28px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+  }
+  .form-group {
+    gap: 12px;
+  }
+  form {
+    gap: 25px;
+  }
+  .contact-form-header {
+    gap: 15px;
+    align-self: stretch;
+  }
+  .contact-form-head a {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .contact-form-head {
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    align-self: stretch;
+  }
+  .contact-form-subhead {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .contact-info-container {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-info-box {
+    height: 210px;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 15px;
+  }
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .contact-head {
+    gap: 15px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 15px 60px;
+  }
+  .contact-head p {
+    font-size: 18px;
+  }
+  .contact-detail-box {
+    gap: 10px;
+  }
+  .contact-detail-box p {
+    font-size: 15px;
+    letter-spacing: 0.32px;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .hero-container {
+    padding: 20px 40px;
+    gap: 22px;
+  }
+  .hero-head {
+    width: 100%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 32px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 24px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+  }
+  .our-service {
+    padding: 50px 50px;
+    gap: 35px;
+  }
+  .our-service-sec {
+    gap: 18px;
+    width: 85%;
+  }
+  .our-service-head {
+    font-size: 26px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 20px;
+  }
+  .grid-box img {
+    width: 35px;
+    height: 35px;
+  }
+  .grid-para {
+    gap: 14px;
+  }
+  .grid-para1 {
+    font-size: 20px;
+  }
+  .grid-para2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .aboutus {
+    width: 100%;
+    padding: 50px 50px;
+    gap: 50px;
+  }
+  .aboutus-container {
+    width: 100%;
+    padding: 35px;
+    gap: 25px;
+  }
+  .aboutus-head {
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .about-us-img {
+    display: block;
+    width: 100%;
+    height: 325px;
+    flex-shrink: 0;
+  }
+  .about-us-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .aboutus-content {
+    gap: 15px;
+  }
+  .aboutus-content span {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .Aboutus-img {
+    display: none;
+  }
+  .contactus {
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 50px;
+    gap: 50px;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 40px;
+    gap: 28px;
+    border-radius: 20px;
+  }
+  .contact-form-header {
+    gap: 15px;
+    align-self: stretch;
+  }
+  .contact-form-head a {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .contact-form-head {
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    align-self: stretch;
+  }
+  .contact-form-subhead {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .contact-info-container {
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .contact-info-box {
+    height: 210px;
+    width: 320px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 15px;
+  }
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .contact-head {
+    gap: 15px;
+  }
+  .contact-head p {
+    font-size: 18px;
+  }
+  .contact-detail-box {
+    gap: 10px;
+  }
+  .contact-detail-box p {
+    font-size: 15px;
+    letter-spacing: 0.32px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .hero-container {
+    padding: 20px 40px;
+    gap: 22px;
+  }
+  .hero-head {
+    width: 75%;
+    gap: 15px;
+  }
+  .hero-cont {
+    font-size: 34px;
+    letter-spacing: 0.9px;
+  }
+  .hero-cont a {
+    font-size: 26px;
+    letter-spacing: 0.7px;
+  }
+  .hero-cont1 {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.74px;
+  }
+
+  .hero-container button {
+    padding: 11px 34px;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: row;
+  }
+  .our-service {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+  .our-service-sec {
+    gap: 25px;
+    width: 75%;
+  }
+  .our-service-head {
+    font-size: 30px;
+    letter-spacing: 0.7px;
+  }
+  .our-service-cont {
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: 0.24px;
+  }
+  .grid-box {
+    gap: 25px;
+  }
+  .grid-box img {
+    width: 40px;
+    height: 40px;
+  }
+  .grid-para {
+    gap: 18px;
+  }
+  .grid-para1 {
+    font-size: 22px;
+  }
+  .grid-para2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .aboutus {
+    width: 100%;
+    padding: 60px 50px;
+    gap: 50px;
+  }
+  .aboutus-container {
+    width: 90%;
+    padding: 40px;
+    gap: 25px;
+  }
+  .aboutus-head {
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .about-us-img {
+    display: block;
+    width: 100%;
+    height: 375px;
+    flex-shrink: 0;
+  }
+  .about-us-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .aboutus-content {
+    gap: 15px;
+  }
+  .aboutus-content span {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .Aboutus-img {
+    display: none;
+  }
+  .contactus {
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 50px;
+    gap: 50px;
+  }
+  .contact-form {
+    width: 725px;
+    padding: 40px;
+    gap: 28px;
+    border-radius: 20px;
+  }
+  .contact-form-header {
+    gap: 15px;
+    align-self: stretch;
+  }
+  .contact-form-head a {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .contact-form-head {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    align-self: stretch;
+  }
+  .contact-form-subhead {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .contact-info-container {
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .contact-info-box {
+    height: 235px;
+    width: 370px;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 15px;
+  }
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .contact-head {
+    gap: 15px;
+  }
+  .contact-head p {
+    font-size: 20px;
+  }
+  .contact-detail-box {
+    gap: 10px;
+  }
+  .contact-detail-box p {
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .aboutus {
+    width: 100%;
+    padding: 80px 10px;
+    gap: 40px;
+  }
+  .aboutus-container {
+    width: 580px;
+    padding: 35px;
+    gap: 25px;
+  }
+
+  .aboutus-content {
+    gap: 15px;
+  }
+  .Aboutus-img {
+    width: 400px;
+    height: 525px;
+    flex-shrink: 0;
+  }
+  .contactus {
+    padding: 80px 10px;
+    gap: 40px;
+  }
+  .contact-form {
+    width: 580px;
+    padding: 40px;
+  }
+  .contact-form-header {
+    gap: 12px;
+  }
+}

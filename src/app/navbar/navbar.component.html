@@ -1,0 +1,35 @@
+<div *ngIf="sidenavWidth > 0" class="overlay" (click)="closeNav()"></div>
+
+<div class="nav-container">
+  <div href="#heropage" class="logo-container" style="cursor: pointer">
+    <img src="/assets/logo.svg" alt="logo" />
+    <span> <a>TECH</a>CORA </span>
+  </div>
+  <!--Laptop screen nav content-->
+  <div id="sidemenu">
+    <span class="sidemenucont" routerLinkActive="active">
+      <a (click)="closeNavAndScroll('ourServices')">Our services</a>
+    </span>
+    <span class="sidemenucont" routerLinkActive="active">
+      <a (click)="closeNavAndScroll('aboutUs')">About us</a>
+    </span>
+    <span class="sidemenucont" routerLinkActive="active">
+      <a (click)="closeNavAndScroll('contact')">Contact</a>
+    </span>
+
+    <img
+      id="menu-icon"
+      style="cursor: pointer"
+      (click)="openNav()"
+      src="/assets/menu-icon.svg"
+      alt="menu-icon"
+    />
+  </div>
+  <!--Side nav for mobile and tab-->
+  <div id="mySidenav" class="sidenav" [style.width.px]="sidenavWidth">
+    <a class="closebtn" (click)="closeNav()">&times;</a>
+    <a (click)="closeNavAndScroll('ourServices')">Our services</a>
+    <a (click)="closeNavAndScroll('aboutUs')">About us</a>
+    <a (click)="closeNavAndScroll('contact')">Contact</a>
+  </div>
+</div>
