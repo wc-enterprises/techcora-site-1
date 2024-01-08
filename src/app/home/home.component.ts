@@ -25,22 +25,21 @@ interface Alert {
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-
   @ViewChild('ourServicesSection') ourServicesSection!: ElementRef;
 
-  constructor(private renderer: Renderer2) {} // Inject Renderer2 in the constructor
+  constructor(private renderer: Renderer2) {}
   navbarHeight: number = 80;
 
   scrollToOurServices(): void {
     const element = this.ourServicesSection.nativeElement;
     if (element) {
-      this.renderer.setProperty(
-        document.documentElement,
-        'scrollTop',
-        element.offsetTop - this.navbarHeight
-      );
+      window.scrollTo({
+        top: element.offsetTop - this.navbarHeight,
+        behavior: 'smooth',
+      });
     }
   }
+
   gridData = [
     {
       icon: '/assets/webicon.svg',
