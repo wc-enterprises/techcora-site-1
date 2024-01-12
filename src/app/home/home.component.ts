@@ -260,9 +260,6 @@ export class HomeComponent {
 
     // Start observing the containers
     this.heroObserver.observe(this.heroSection.nativeElement);
-    this.servicesObserver.observe(this.ourServicesSection.nativeElement);
-    this.aboutUsObserver.observe(this.aboutUsSection.nativeElement);
-    this.contactObserver.observe(this.contactSection.nativeElement);
   }
 
   private initIntersectionObservers() {
@@ -337,7 +334,8 @@ export class HomeComponent {
   //   this.animateAboutUs().play();
   //   this.animateContact().play();
   // }
-  @ViewChild('ourServicesSection') ourServicesSection!: ElementRef;
+  @ViewChild('ourServicesSection')
+  ourServicesSection!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
