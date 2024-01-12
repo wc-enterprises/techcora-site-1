@@ -6,8 +6,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
