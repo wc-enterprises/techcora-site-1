@@ -93,6 +93,7 @@ import { Component, HostListener, Renderer2 } from '@angular/core';
 export class NavbarComponent {
   sidenavWidth: number = 0;
   navbarHeight: number = 50;
+
   constructor(private renderer: Renderer2) {}
 
   @HostListener('window:scroll', ['$event'])

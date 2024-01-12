@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ScrollColorChange } from './common-utils/background-color-change-on-scroll.directive';
 import { ScrollChangeColorDirective } from './scroll-change-color.directive';
+import { AnimationStateService } from './common-utils/animation-state.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ScrollChangeColorDirective } from './scroll-change-color.directive';
     ScrollChangeColorDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [AnimationStateService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
