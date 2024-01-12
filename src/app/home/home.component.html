@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div id="heropage">
+    <div id="heropage" #heroSection>
       <div style="height: 80px; width: 100%"></div>
       <app-navbar
+        #heroNav
         style="position: fixed; z-index: 1"
         scrollColorChange
       ></app-navbar>
@@ -26,22 +27,26 @@
             >
           </span>
         </div>
-        <button (click)="scrollToOurServices()">Explore</button>
+        <button (click)="scrollToOurServices()" #heroDescription>
+          Explore
+        </button>
       </div>
       <div style="height: 50px; width: 100%"></div>
     </div>
 
     <div class="our-service" id="ourServices" #ourServicesSection>
       <div class="our-service-sec">
-        <span class="our-service-head"><a>WHAT</a> WE DO </span>
-        <span class="our-service-cont">
+        <span class="our-service-head" #ourServicesHeadline
+          ><a>WHAT</a> WE DO
+        </span>
+        <span class="our-service-cont" #ourServicesSubHeadline>
           Discover a new era of innovation with <a>Techcora</a>. We create
           custom IT solutions and advanced software to enhance your digital
           experience. Step into a future where technology and creativity meet
           seamlessly – welcome to <a>Techcora</a>.</span
         >
       </div>
-      <div class="grid-container">
+      <div class="grid-container" #ourServicesGrid>
         <div *ngFor="let box of gridData" class="grid-box">
           <img [src]="box.icon" alt="Icon" />
           <div class="grid-para">
@@ -52,14 +57,14 @@
       </div>
     </div>
 
-    <div class="aboutus" id="aboutUs">
-      <div class="aboutus-container">
-        <span class="aboutus-head"><a>Who</a> we are </span>
-        <span class="about-us-img">
+    <div class="aboutus" id="aboutUs" #aboutUsSection>
+      <div class="aboutus-container" #aboutUsContainer>
+        <span class="aboutus-head" #aboutusHeadline><a>Who</a> we are </span>
+        <span class="about-us-img" #AboutusImgCont>
           <img src="/assets/aboutus-mob.svg" alt="Aboutus-img" />
         </span>
 
-        <div class="aboutus-content">
+        <div class="aboutus-content" #aboutusContent>
           <span
             >We’re a diverse team with decades of experience in the industry
             spanning back to the early 1990s. Through working on various
@@ -84,20 +89,20 @@
           >
         </div>
       </div>
-      <span class="Aboutus-img">
+      <span class="Aboutus-img" #AboutusImg>
         <img class="aboutus-img" src="/assets/aboutus.svg" alt="Aboutus-img" />
       </span>
     </div>
-    <div class="contactus" id="contact">
-      <div class="contact-form">
+    <div class="contactus" id="contact" #contactSection>
+      <div class="contact-form" #contactContainer>
         <div class="contact-form-header">
-          <span class="contact-form-head"> <a>CONTACT</a> US</span>
-          <span class="contact-form-subhead"
+          <span class="contact-form-head" #contactHead> <a>CONTACT</a> US</span>
+          <span class="contact-form-subhead" #contactSubHead
             >Send our team a message below and we will get back to you.</span
           >
         </div>
 
-        <form (ngSubmit)="submitForm()" #quoteForm="ngForm">
+        <form (ngSubmit)="submitForm()" #quoteForm="ngForm" #contactForm>
           <div class="form-group">
             <div class="form-field">
               <input
@@ -147,7 +152,7 @@
         </form>
       </div>
 
-      <div class="contact-info-container">
+      <div class="contact-info-container" #contactInfo>
         <div *ngFor="let box of infoData" class="contact-info-box">
           <img class="contact-icon" [src]="box.icon" alt="Icon" />
           <div class="contact-head">

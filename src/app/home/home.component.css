@@ -9,10 +9,6 @@ body {
   width: 100vw;
   height: auto;
 }
-.disable-click {
-  pointer-events: none;
-  user-select: none;
-}
 
 #heropage {
   display: flex;
@@ -43,7 +39,7 @@ body::-webkit-scrollbar {
   gap: 28px;
 }
 .hero-head {
-  width: 65%;
+  width: 72%;
 
   display: flex;
   flex-direction: column;
@@ -61,8 +57,8 @@ body::-webkit-scrollbar {
 .hero-cont a {
   color: #fff;
   text-align: center;
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 400;
   letter-spacing: 0.7px;
 }
 .hero-cont1 a {
@@ -72,8 +68,8 @@ body::-webkit-scrollbar {
   align-self: stretch;
   color: #e9ecef;
   text-align: center;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 400;
   line-height: 45px;
   letter-spacing: 0.74px;
 }
@@ -95,13 +91,12 @@ body::-webkit-scrollbar {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.4px;
-  font-family: League Spartan;
+  font-family: Cabin;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
 }
 .hero-container button:hover {
   background: #a78bfa;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 .our-service {
   display: flex;
@@ -133,9 +128,9 @@ body::-webkit-scrollbar {
 .our-service-cont {
   color: #e9ecef;
   text-align: center;
-  font-family: League Spartan;
+  font-family: Cabin;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 35px;
   letter-spacing: 0.24px;
 }
@@ -149,7 +144,7 @@ body::-webkit-scrollbar {
   width: 82%;
 }
 
-.grid-box {
+/* .grid-box {
   text-align: center;
   display: flex;
   padding: 20px 15px;
@@ -157,14 +152,57 @@ body::-webkit-scrollbar {
   align-items: flex-start;
   gap: 25px;
   border-radius: 10px;
-  border: 1px solid #aa8df6;
+  border: 0.2px solid #aa8df6;
   background: linear-gradient(180deg, #452e7b 0%, rgba(69, 46, 123, 0) 100%);
-  box-shadow: 3px 3px 5px 0px #a78bfa;
+  box-shadow: 1px 3px 2px 0px #a78bfa;
+  transition: transform 0.6s ease-in-out;
+} */
+.grid-box {
+  --border-size: 1px;
+  --border-angle: 0turn;
+  text-align: center;
+  display: flex;
+  border-radius: 1px;
+  padding: 20px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 5s linear infinite;
   transition: transform 0.6s ease-in-out;
 }
+
 .grid-box:hover {
+  animation-play-state: paused;
   transform: scale(1.03);
 }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+/* .grid-box:hover {
+  transform: scale(1.03);
+} */
 .grid-box img {
   width: 45px;
   height: 45px;
@@ -183,9 +221,9 @@ body::-webkit-scrollbar {
 }
 .grid-para2 {
   color: #e9ecef;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 26px;
   letter-spacing: 0.36px;
   text-align: left;
 }
@@ -209,14 +247,24 @@ body::-webkit-scrollbar {
   gap: 28px;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 1px solid #a78bfa;
 
-  box-shadow: 3px 3px 5px 0px #a78bfa;
-  transition: transform 0.6s ease-in-out;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .aboutus-container:hover {
   transform: scale(1.03);
 }
+
 .aboutus-head {
   color: #fff;
   font-size: 35px;
@@ -243,7 +291,7 @@ body::-webkit-scrollbar {
   align-self: stretch;
   color: #e9ecef;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 25px;
   letter-spacing: 0.36px;
 }
@@ -278,14 +326,20 @@ body::-webkit-scrollbar {
   gap: 28px;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 1px solid #a78bfa;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-  box-shadow: 3px 3px 5px 0px #a78bfa;
-  transition: transform 0.6s ease-in-out;
-}
-.contact-form:hover {
-  transform: scale(1.03);
-}
 .contact-form-header {
   display: flex;
   flex-direction: column;
@@ -338,22 +392,22 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: #e6e8e8;
+  background: #ffffff;
 
-  color: #5c5c5c;
-  font-family: League Spartan;
+  color: #202020;
+  font-family: Cabin;
   font-size: 15px;
   font-weight: 400;
   line-height: normal;
 }
 .form-group input:-webkit-autofill,
 .form-group textarea:-webkit-autofill {
-  background-color: #e6e8e8; /* Change to the desired background color */
-  -webkit-text-fill-color: #5c5c5c; /* Set the text color for autofilled inputs */
+  background-color: #ffffff; /* Change to the desired background color */
+  -webkit-text-fill-color: #000000; /* Set the text color for autofilled inputs */
 }
 .form-group input:focus,
 .form-group textarea:focus {
-  background: #e6e8e8; /* Change to the desired background color */
+  background: #ffffff; /* Change to the desired background color */
   outline: none; /* Remove the default focus outline if not needed */
 }
 
@@ -369,7 +423,7 @@ form {
 }
 .form-group span {
   color: #d32c1ad4;
-  font-family: League Spartan;
+  font-family: Cabin;
   font-size: 14px;
   font-weight: 400;
   width: 100%;
@@ -381,7 +435,7 @@ form {
 button[type="submit"] {
   cursor: pointer;
   color: #fff;
-  font-family: League Spartan;
+  font-family: Cabin;
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
@@ -417,16 +471,29 @@ button[type="submit"]:hover {
   align-items: center;
   gap: 20px;
   align-self: stretch;
-  border-radius: 15px;
-  border: 1px solid #a78bfa;
+  border-radius: 2px;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-  background: linear-gradient(180deg, #452e7b 0%, rgba(69, 46, 123, 0) 100%);
-
-  box-shadow: 3px 3px 5px 0px #a78bfa;
+  animation: bg-spin 5s linear infinite;
   transition: transform 0.6s ease-in-out;
+  --border-size: 2px;
+  --border-angle: 0turn;
 }
+
 .contact-info-box:hover {
   transform: scale(1.03);
+  animation-play-state: paused;
 }
 .contact-icon {
   width: 50px;
@@ -443,7 +510,7 @@ button[type="submit"]:hover {
   color: #fff;
   text-align: center;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.4px;
   align-self: stretch;
 }
@@ -458,10 +525,11 @@ button[type="submit"]:hover {
   color: #e9ecef;
   text-align: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.32px;
   align-self: stretch;
 }
+
 @media (max-width: 426px) {
   .hero-container {
     padding: 20px 20px;
@@ -472,19 +540,23 @@ button[type="submit"]:hover {
     gap: 15px;
   }
   .hero-cont {
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 0.9px;
+    text-align: left;
   }
   .hero-cont a {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 0.7px;
   }
   .hero-cont1 {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 28px;
     letter-spacing: 0.74px;
+    text-align: left;
   }
-
+  .hero-container {
+    align-items: flex-start;
+  }
   .hero-container button {
     padding: 11px 34px;
     border-radius: 8px;
@@ -539,6 +611,7 @@ button[type="submit"]:hover {
     padding: 0px;
     gap: 18px;
     border: none;
+    background-image: none;
     box-shadow: none;
   }
   .aboutus-head {
@@ -581,6 +654,7 @@ button[type="submit"]:hover {
     border-radius: 15px;
     border: none;
     box-shadow: none;
+    background-image: none;
   }
   .form-group {
     gap: 12px;
@@ -618,7 +692,6 @@ button[type="submit"]:hover {
     width: 100%;
     padding: 20px;
     gap: 20px;
-    border-radius: 15px;
   }
   .contact-icon {
     width: 45px;
@@ -657,12 +730,12 @@ button[type="submit"]:hover {
     letter-spacing: 0.9px;
   }
   .hero-cont a {
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 0.7px;
   }
   .hero-cont1 {
     font-size: 22px;
-    line-height: 28px;
+    line-height: 30px;
     letter-spacing: 0.74px;
   }
 
@@ -789,7 +862,6 @@ button[type="submit"]:hover {
     width: 320px;
     padding: 20px;
     gap: 20px;
-    border-radius: 15px;
   }
   .contact-icon {
     width: 50px;
@@ -823,12 +895,12 @@ button[type="submit"]:hover {
     letter-spacing: 0.9px;
   }
   .hero-cont a {
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 0.7px;
   }
   .hero-cont1 {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 34px;
     letter-spacing: 0.74px;
   }
 
@@ -955,7 +1027,6 @@ button[type="submit"]:hover {
     width: 370px;
     padding: 25px;
     gap: 20px;
-    border-radius: 15px;
   }
   .contact-icon {
     width: 50px;

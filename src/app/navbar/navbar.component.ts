@@ -83,7 +83,13 @@
 //   }
 // }
 
-import { Component, HostListener, Renderer2 } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Output,
+  Renderer2,
+} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -91,6 +97,8 @@ import { Component, HostListener, Renderer2 } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  @Output() sideNavbarOpen = new EventEmitter<void>();
+  @Output() sideNavbarClose = new EventEmitter<void>();
   sidenavWidth: number = 0;
   navbarHeight: number = 50;
   constructor(private renderer: Renderer2) {}
