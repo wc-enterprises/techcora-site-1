@@ -417,6 +417,7 @@ export class HomeComponent {
     } // If validation passes, you can send the data to the server or perform any other actions
 
     console.log('Form submitted:', this.formData); // Clear the form fields after successful submission
+    
 
     this.formData = {
       name: '',
