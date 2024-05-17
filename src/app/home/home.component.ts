@@ -365,14 +365,14 @@ export class HomeComponent {
         'Developing innovative apps to revolutionize your digital experience.',
     },
     {
-      icon: '/assets/uiicon.svg',
-      paragraph1: 'UI/UX design',
+      icon: '/assets/aiicon.svg',
+      paragraph1: 'AI/ML applications',
       paragraph2:
         'Innovative AI/ML application development for cutting-edge technological solutions.        ',
     },
     {
-      icon: '/assets/aiicon.svg',
-      paragraph1: 'AI/ML applications',
+      icon: '/assets/uiicon.svg',
+      paragraph1: 'UI/UX design',
       paragraph2:
         'Building intuitive apps with stellar design for an unmatched user experience.        ',
     },
@@ -381,14 +381,12 @@ export class HomeComponent {
     {
       icon: '/assets/contact-icon.svg',
       paragraph1: 'Call & talk to us',
-      paragraph2: '+91 9876543210',
-      paragraph3: '+91 9800543210',
+      paragraph2: '+91 9884341528',
     },
     {
       icon: '/assets/gmail-icon.svg',
       paragraph1: 'G-mail support',
-      paragraph2: 'techcora@gmail.com',
-      paragraph3: 'techcora@gmail.com',
+      paragraph2: 'info@techcoracorp.com'
     },
   ];
   formData: FormData = {

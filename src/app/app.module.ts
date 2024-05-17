@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ScrollColorChange } from './common-utils/background-color-change-on-scroll.directive';
 import { ScrollChangeColorDirective } from './scroll-change-color.directive';
 import { AnimationStateService } from './common-utils/animation-state.service';
+import { InternshipPosterComponent } from './internship-poster/internship-poster.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AnimationStateService } from './common-utils/animation-state.service';
     HomeComponent,
     ScrollColorChange,
     ScrollChangeColorDirective,
+    InternshipPosterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [AnimationStateService],
