@@ -1,12 +1,6 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  Renderer2,
-  ViewChild,
-} from "@angular/core";
-import { doc, Firestore, setDoc } from "@angular/fire/firestore";
-import { gsap } from "gsap";
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { doc, Firestore, setDoc } from '@angular/fire/firestore';
+import { gsap } from 'gsap';
 interface FormData {
   name: string;
   email: string;
@@ -21,41 +15,41 @@ interface Alert {
   message: string;
 }
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   private heroObserver!: IntersectionObserver;
   private servicesObserver!: IntersectionObserver;
   private aboutUsObserver!: IntersectionObserver;
   private contactObserver!: IntersectionObserver;
-  @ViewChild("aboutUsSection", { static: true }) aboutUsSection!: ElementRef;
-  @ViewChild("contactSection", { static: true }) contactSection!: ElementRef;
-  @ViewChild("heroSection", { static: true }) heroSection!: ElementRef;
+  @ViewChild('aboutUsSection', { static: true }) aboutUsSection!: ElementRef;
+  @ViewChild('contactSection', { static: true }) contactSection!: ElementRef;
+  @ViewChild('heroSection', { static: true }) heroSection!: ElementRef;
 
-  @ViewChild("heroHeadline", { static: true }) heroHeadline!: ElementRef;
-  @ViewChild("heroSubHeadline", { static: true }) heroSubHeadline!: ElementRef;
-  @ViewChild("heroDescription", { static: true }) heroDescription!: ElementRef;
+  @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
+  @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
+  @ViewChild('heroDescription', { static: true }) heroDescription!: ElementRef;
 
-  @ViewChild("ourServicesHeadline", { static: true })
+  @ViewChild('ourServicesHeadline', { static: true })
   ourServicesHeadline!: ElementRef;
-  @ViewChild("ourServicesSubHeadline", { static: true })
+  @ViewChild('ourServicesSubHeadline', { static: true })
   ourServicesSubHeadline!: ElementRef;
-  @ViewChild("ourServicesGrid", { static: true })
+  @ViewChild('ourServicesGrid', { static: true })
   ourServicesGrid!: ElementRef;
-  @ViewChild("aboutUsContainer", { static: true })
+  @ViewChild('aboutUsContainer', { static: true })
   aboutUsContainer!: ElementRef;
-  @ViewChild("aboutusHeadline", { static: true }) aboutusHeadline!: ElementRef;
-  @ViewChild("aboutusContent", { static: true }) aboutusContent!: ElementRef;
-  @ViewChild("AboutusImg", { static: true }) AboutusImg!: ElementRef;
-  @ViewChild("AboutusImgCont", { static: true }) AboutusImgCont!: ElementRef;
-  @ViewChild("contactContainer", { static: true })
+  @ViewChild('aboutusHeadline', { static: true }) aboutusHeadline!: ElementRef;
+  @ViewChild('aboutusContent', { static: true }) aboutusContent!: ElementRef;
+  @ViewChild('AboutusImg', { static: true }) AboutusImg!: ElementRef;
+  @ViewChild('AboutusImgCont', { static: true }) AboutusImgCont!: ElementRef;
+  @ViewChild('contactContainer', { static: true })
   contactContainer!: ElementRef;
-  @ViewChild("contactHead", { static: true }) contactHead!: ElementRef;
-  @ViewChild("contactSubHead", { static: true }) contactSubHead!: ElementRef;
-  @ViewChild("contactForm", { static: true }) contactForm!: ElementRef;
-  @ViewChild("contactInfo", { static: true }) contactInfo!: ElementRef;
+  @ViewChild('contactHead', { static: true }) contactHead!: ElementRef;
+  @ViewChild('contactSubHead', { static: true }) contactSubHead!: ElementRef;
+  @ViewChild('contactForm', { static: true }) contactForm!: ElementRef;
+  @ViewChild('contactInfo', { static: true }) contactInfo!: ElementRef;
 
   animateHeroText() {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
@@ -64,19 +58,19 @@ export class HomeComponent {
       opacity: 0,
       y: -30,
       duration: 1.3,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.heroSubHeadline.nativeElement, {
       opacity: 0,
       y: -30,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.heroDescription.nativeElement, {
       opacity: 0,
       x: -30,
       duration: 1,
-      ease: "power4.inOut",
+      ease: 'power4.inOut',
     });
 
     return tl;
@@ -115,7 +109,7 @@ export class HomeComponent {
   //     }
   //   }
   // }
-  @HostListener("window:scroll", ["$event"])
+  @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
     const windowHeight = window.innerHeight;
     const scrollPosition = window.scrollY;
@@ -159,31 +153,31 @@ export class HomeComponent {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.contactHead.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.contactSubHead.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.contactForm.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.contactInfo.nativeElement, {
       opacity: 0,
       x: 60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
 
     return tl;
@@ -198,32 +192,32 @@ export class HomeComponent {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
 
     tl.from(this.aboutusHeadline.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.AboutusImgCont.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.aboutusContent.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.AboutusImg.nativeElement, {
       opacity: 0,
       x: -50,
       duration: 1,
-      ease: "power4.Out",
+      ease: 'power4.Out',
     });
 
     return tl;
@@ -237,19 +231,19 @@ export class HomeComponent {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.ourServicesSubHeadline.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
     tl.from(this.ourServicesGrid.nativeElement, {
       opacity: 0,
       y: -60,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
 
     return tl;
@@ -271,25 +265,25 @@ export class HomeComponent {
 
     // Create Intersection Observer instances for each container
     this.heroObserver = new IntersectionObserver(
-      (entries, observer) => this.handleIntersection(entries, observer, "hero"),
+      (entries, observer) => this.handleIntersection(entries, observer, 'hero'),
       options
     );
 
     this.servicesObserver = new IntersectionObserver(
       (entries, observer) =>
-        this.handleIntersection(entries, observer, "services"),
+        this.handleIntersection(entries, observer, 'services'),
       options
     );
 
     this.aboutUsObserver = new IntersectionObserver(
       (entries, observer) =>
-        this.handleIntersection(entries, observer, "aboutUs"),
+        this.handleIntersection(entries, observer, 'aboutUs'),
       options
     );
 
     this.contactObserver = new IntersectionObserver(
       (entries, observer) =>
-        this.handleIntersection(entries, observer, "contact"),
+        this.handleIntersection(entries, observer, 'contact'),
       options
     );
   }
@@ -314,16 +308,16 @@ export class HomeComponent {
   private triggerAnimations(container: string) {
     // Implement your GSAP animations for each container here
     switch (container) {
-      case "hero":
+      case 'hero':
         this.animateHeroText().play();
         break;
-      case "services":
+      case 'services':
         this.animateOurServices().play();
         break;
-      case "aboutUs":
+      case 'aboutUs':
         this.animateAboutUs().play();
         break;
-      case "contact":
+      case 'contact':
         this.animateContact().play();
         break;
       // Add more cases for additional containers if needed
@@ -335,7 +329,7 @@ export class HomeComponent {
   //   this.animateAboutUs().play();
   //   this.animateContact().play();
   // }
-  @ViewChild("ourServicesSection")
+  @ViewChild('ourServicesSection')
   ourServicesSection!: ElementRef;
 
   constructor(private firestore: Firestore) {}
@@ -344,7 +338,7 @@ export class HomeComponent {
     const id = Math.floor(
       100000000000 + Math.random() * 900000000000
     ).toString();
-    const leadsRef = doc(this.firestore, "leads", id);
+    const leadsRef = doc(this.firestore, 'leads', id);
     setDoc(leadsRef, { id, ...lead });
   }
 
@@ -355,85 +349,85 @@ export class HomeComponent {
     if (element) {
       window.scrollTo({
         top: element.offsetTop - this.navbarHeight,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   }
 
   gridData = [
     {
-      icon: "/assets/webicon.svg",
-      paragraph1: "Web development",
+      icon: '/assets/webicon.svg',
+      paragraph1: 'Web development',
       paragraph2:
-        "Building innovative, user-friendly websites for your digital success.",
+        'Building innovative, user-friendly websites for your digital success.',
     },
     {
-      icon: "/assets/appicon.svg",
-      paragraph1: "App development",
+      icon: '/assets/appicon.svg',
+      paragraph1: 'App development',
       paragraph2:
-        "Developing innovative apps to revolutionize your digital experience.",
+        'Developing innovative apps to revolutionize your digital experience.',
     },
     {
-      icon: "/assets/aiicon.svg",
-      paragraph1: "AI/ML applications",
+      icon: '/assets/aiicon.svg',
+      paragraph1: 'AI/ML applications',
       paragraph2:
-        "Innovative AI/ML application development for cutting-edge technological solutions.        ",
+        'Innovative AI/ML application development for cutting-edge technological solutions.        ',
     },
     {
-      icon: "/assets/uiicon.svg",
-      paragraph1: "UI/UX design",
+      icon: '/assets/uiicon.svg',
+      paragraph1: 'UI/UX design',
       paragraph2:
-        "Building intuitive apps with stellar design for an unmatched user experience.        ",
+        'Building intuitive apps with stellar design for an unmatched user experience.        ',
     },
   ];
   infoData = [
     {
-      icon: "/assets/contact-icon.svg",
-      paragraph1: "Call & talk to us",
-      paragraph2: "+91 9884341528",
+      icon: '/assets/contact-icon.svg',
+      paragraph1: 'Call & talk to us',
+      paragraph2: '+91 9884341528',
     },
     {
-      icon: "/assets/gmail-icon.svg",
-      paragraph1: "G-mail support",
-      paragraph2: "info@techcoracorp.com",
+      icon: '/assets/gmail-icon.svg',
+      paragraph1: 'G-mail support',
+      paragraph2: 'info@techcoracorp.com',
     },
   ];
   formData: FormData = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
   };
 
   alert: Alert = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
   };
 
   submitForm() {
     // Reset previous validation messages
     this.alert = {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
     }; // Add your form validation logic here
 
     if (!this.validateForm()) {
       return;
     } // If validation passes, you can send the data to the server or perform any other actions
 
-    console.log("Form submitted:", this.formData); // Clear the form fields after successful submission
+    console.log('Form submitted:', this.formData); // Clear the form fields after successful submission
     this.addLead(this.formData);
-    window.alert("Form submitted successfully");
+    window.alert('Form submitted successfully');
 
     this.formData = {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
     }; // You can use Angular HttpClient to send the form data to your server for email handling // Example: this.http.post('/api/send-email', this.formData).subscribe(response => {...});
   }
 
@@ -441,22 +435,23 @@ export class HomeComponent {
     let isValid = true; // Validation for name (only alphabets)
 
     if (!/^[a-zA-Z\s.]+$/.test(this.formData.name)) {
-      this.alert.name = "Enter a valid username (only alphabets, dot(.) and space).";
+      this.alert.name =
+        'Enter a valid username (only alphabets, dot(.) and space).';
       isValid = false;
     } // Validation for email (alphabets, numbers, @, and ends with gmail.com)
 
     if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(this.formData.email)) {
-      this.alert.email = "Enter a valid Gmail account email address.";
+      this.alert.email = 'Enter a valid Gmail account email address.';
       isValid = false;
     } // Validation for phone (only numbers)
 
     if (!/^\d+$/.test(this.formData.phone)) {
-      this.alert.phone = "Enter a valid phone number (only numbers).";
+      this.alert.phone = 'Enter a valid phone number (only numbers).';
       isValid = false;
     } // Validation for message (minimum one line)
 
     if (this.formData.message.trim().length < 1) {
-      this.alert.message = "Enter a message.";
+      this.alert.message = 'Enter a message.';
       isValid = false;
     }
 
@@ -464,6 +459,6 @@ export class HomeComponent {
   }
 
   isFieldInvalid(field: keyof Alert): boolean {
-    return this.alert[field] !== "";
+    return this.alert[field] !== '';
   }
 }
