@@ -55,15 +55,6 @@ body::-webkit-scrollbar {
   letter-spacing: 0.9px;
 }
 
-.hero-tagline {
-  align-self: stretch;
-  text-align: center;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
 .hero-cont a {
   color: #fff;
   text-align: center;
