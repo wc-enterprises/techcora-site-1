@@ -357,27 +357,27 @@ export class HomeComponent {
   gridData = [
     {
       icon: '/assets/webicon.svg',
-      paragraph1: 'Web development',
+      paragraph1: 'Software',
       paragraph2:
-        'Building innovative, user-friendly websites for your digital success.',
+        'Developing cutting-edge software solutions across web, mobile, and enterprise applications with a focus on scalability and innovation.',
     },
     {
-      icon: '/assets/appicon.svg',
-      paragraph1: 'App development',
+      icon: '/assets/robotics-icon.svg', 
+      paragraph1: 'Robotics',
       paragraph2:
-        'Developing innovative apps to revolutionize your digital experience.',
+        'Building next-generation robotics systems for automation, manufacturing, and advanced industrial applications.',
     },
     {
-      icon: '/assets/aiicon.svg',
-      paragraph1: 'AI/ML applications',
+      icon: '/assets/rocket-icon.svg',
+      paragraph1: 'Rockets',
       paragraph2:
-        'Innovative AI/ML application development for cutting-edge technological solutions.',
+        'Pioneering space technology through advanced propulsion systems and launch vehicle development for India\'s space ambitions.',
     },
     {
-      icon: '/assets/uiicon.svg',
-      paragraph1: 'UI/UX design',
+      icon: '/assets/energy-icon.svg',
+      paragraph1: 'Energy',
       paragraph2:
-        'Building intuitive apps with stellar design for an unmatched user experience.',
+        'Innovating sustainable energy solutions through smart grid technology, renewable systems, and energy storage solutions.',
     },
   ];
   infoData = [
