@@ -54,6 +54,16 @@ body::-webkit-scrollbar {
   font-weight: 700;
   letter-spacing: 0.9px;
 }
+
+.hero-tagline {
+  align-self: stretch;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
 .hero-cont a {
   color: #fff;
   text-align: center;
@@ -542,6 +552,10 @@ button[type="submit"]:hover {
   .hero-cont {
     font-size: 30px;
     letter-spacing: 0.9px;
+    text-align: left;
+  }
+  .hero-tagline {
+    font-size: 18px;
     text-align: left;
   }
   .hero-cont a {
