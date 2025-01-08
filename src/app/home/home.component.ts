@@ -371,13 +371,13 @@ export class HomeComponent {
       icon: '/assets/aiicon.svg',
       paragraph1: 'AI/ML applications',
       paragraph2:
-        'Innovative AI/ML application development for cutting-edge technological solutions.        ',
+        'Innovative AI/ML application development for cutting-edge technological solutions.',
     },
     {
       icon: '/assets/uiicon.svg',
       paragraph1: 'UI/UX design',
       paragraph2:
-        'Building intuitive apps with stellar design for an unmatched user experience.        ',
+        'Building intuitive apps with stellar design for an unmatched user experience.',
     },
   ];
   infoData = [
