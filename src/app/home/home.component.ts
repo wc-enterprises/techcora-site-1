@@ -31,10 +31,10 @@ export class HomeComponent {
 
   private updateCountdown() {
     const now = new Date();
-    const juneTarget = new Date(2025, 5, 30, 23, 59, 59); // June 30, 2025
+    const mayTarget = new Date(2025, 4, 5, 23, 59, 59); // June 30, 2025
     const decTarget = new Date(2025, 11, 31, 23, 59, 59); // December 31, 2025
 
-    this.juneCountdown = this.calculateTimeRemaining(now, juneTarget);
+    this.juneCountdown = this.calculateTimeRemaining(now, mayTarget);
     this.decemberCountdown = this.calculateTimeRemaining(now, decTarget);
   }
 
