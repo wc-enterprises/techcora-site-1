@@ -27,6 +27,7 @@ export class HomeComponent {
   @ViewChild('aboutUsSection', { static: true }) aboutUsSection!: ElementRef;
   @ViewChild('contactSection', { static: true }) contactSection!: ElementRef;
   @ViewChild('heroSection', { static: true }) heroSection!: ElementRef;
+  @ViewChild('growthSection', { static: true }) growthSection!: ElementRef;
 
   @ViewChild('heroHeadline', { static: true }) heroHeadline!: ElementRef;
   @ViewChild('heroSubHeadline', { static: true }) heroSubHeadline!: ElementRef;
