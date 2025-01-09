@@ -24,6 +24,34 @@ export class HomeComponent {
   private servicesObserver!: IntersectionObserver;
   private aboutUsObserver!: IntersectionObserver;
   private contactObserver!: IntersectionObserver;
+  
+  juneCountdown: string = '';
+  decemberCountdown: string = '';
+  private countdownInterval: any;
+
+  private updateCountdown() {
+    const now = new Date();
+    const juneTarget = new Date(2025, 5, 30, 23, 59, 59); // June 30, 2025
+    const decTarget = new Date(2025, 11, 31, 23, 59, 59); // December 31, 2025
+
+    this.juneCountdown = this.calculateTimeRemaining(now, juneTarget);
+    this.decemberCountdown = this.calculateTimeRemaining(now, decTarget);
+  }
+
+  private calculateTimeRemaining(now: Date, target: Date): string {
+    const diff = target.getTime() - now.getTime();
+    
+    if (diff <= 0) {
+      return 'Deadline reached';
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
   @ViewChild('aboutUsSection', { static: true }) aboutUsSection!: ElementRef;
   @ViewChild('contactSection', { static: true }) contactSection!: ElementRef;
   @ViewChild('heroSection', { static: true }) heroSection!: ElementRef;
@@ -256,6 +284,16 @@ export class HomeComponent {
 
     // Start observing the containers
     this.heroObserver.observe(this.heroSection.nativeElement);
+    
+    // Initialize countdown timers
+    this.updateCountdown();
+    this.countdownInterval = setInterval(() => this.updateCountdown(), 1000);
+  }
+
+  ngOnDestroy() {
+    if (this.countdownInterval) {
+      clearInterval(this.countdownInterval);
+    }
   }
 
   private initIntersectionObservers() {

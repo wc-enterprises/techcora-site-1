@@ -1217,6 +1217,30 @@ button[type="submit"]:hover {
   background: linear-gradient(180deg, rgba(167, 139, 250, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
   border-radius: 15px;
   min-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.target-item:hover {
+  transform: translateY(-5px);
+}
+
+.countdown {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.countdown p {
+  color: #a78bfa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.timer {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: monospace;
 }
 
 .target-item h3 {
@@ -1243,17 +1267,24 @@ button[type="submit"]:hover {
 }
 
 .timeline-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .timeline-item {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column;
+  padding: 25px;
   background: linear-gradient(180deg, rgba(167, 139, 250, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
 }
 
 .timeline-date {
