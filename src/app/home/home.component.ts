@@ -452,22 +452,34 @@ export class HomeComponent {
       email: '',
       phone: '',
       message: '',
-    }; // Add your form validation logic here
+    };
 
     if (!this.validateForm()) {
       return;
-    } // If validation passes, you can send the data to the server or perform any other actions
+    }
 
-    console.log('Form submitted:', this.formData); // Clear the form fields after successful submission
+    // Format the WhatsApp message
+    const message = `New Contact Form Submission\n\nName: ${this.formData.name}\nEmail: ${this.formData.email}\nPhone: ${this.formData.phone}\nMessage: ${this.formData.message}`;
+    
+    // Your WhatsApp business phone number (include country code)
+    const phoneNumber = '919884341528'; // Replace with your actual number
+    
+    // Create WhatsApp URL with pre-filled message
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    
+    // Save to Firestore
     this.addLead(this.formData);
-    window.alert('Form submitted successfully');
+    
+    // Open WhatsApp in a new window
+    window.open(whatsappUrl, '_blank');
 
+    // Clear the form
     this.formData = {
       name: '',
       email: '',
       phone: '',
       message: '',
-    }; // You can use Angular HttpClient to send the form data to your server for email handling // Example: this.http.post('/api/send-email', this.formData).subscribe(response => {...});
+    };
   }
 
   validateForm(): boolean {
