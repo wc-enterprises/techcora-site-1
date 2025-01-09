@@ -458,20 +458,25 @@ export class HomeComponent {
       return;
     }
 
-    // Format the WhatsApp message
+    // Your WhatsApp number
+    const phoneNumber = '918248495900';
+    
+    // Format the message for WhatsApp
     const message = `New Contact Form Submission\n\nName: ${this.formData.name}\nEmail: ${this.formData.email}\nPhone: ${this.formData.phone}\nMessage: ${this.formData.message}`;
-    
-    // Your WhatsApp business phone number (include country code)
-    const phoneNumber = '919884341528'; // Replace with your actual number
-    
-    // Create WhatsApp URL with pre-filled message
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     
     // Save to Firestore
     this.addLead(this.formData);
     
-    // Open WhatsApp in a new window
-    window.open(whatsappUrl, '_blank');
+    // Send to WhatsApp using the WhatsApp Business API
+    fetch(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`, {
+      method: 'GET',
+      mode: 'no-cors'
+    }).then(() => {
+      window.alert('Form submitted successfully! We will contact you soon.');
+    }).catch(error => {
+      console.error('Error sending message:', error);
+      window.alert('Form submitted. We will get back to you shortly.');
+    });
 
     // Clear the form
     this.formData = {
