@@ -24,14 +24,14 @@ export class HomeComponent {
   private servicesObserver!: IntersectionObserver;
   private aboutUsObserver!: IntersectionObserver;
   private contactObserver!: IntersectionObserver;
-  
+
   juneCountdown: string = '';
   decemberCountdown: string = '';
   private countdownInterval: any;
 
   private updateCountdown() {
     const now = new Date();
-    const mayTarget = new Date(2025, 4, 5, 23, 59, 59); // June 30, 2025
+    const mayTarget = new Date(2025, 4, 23, 23, 59, 59); // May 23, 2025
     const decTarget = new Date(2025, 11, 31, 23, 59, 59); // December 31, 2025
 
     this.juneCountdown = this.calculateTimeRemaining(now, mayTarget);
@@ -40,7 +40,7 @@ export class HomeComponent {
 
   private calculateTimeRemaining(now: Date, target: Date): string {
     const diff = target.getTime() - now.getTime();
-    
+
     if (diff <= 0) {
       return 'Deadline reached';
     }
@@ -284,7 +284,7 @@ export class HomeComponent {
 
     // Start observing the containers
     this.heroObserver.observe(this.heroSection.nativeElement);
-    
+
     // Initialize countdown timers
     this.updateCountdown();
     this.countdownInterval = setInterval(() => this.updateCountdown(), 1000);
@@ -401,7 +401,7 @@ export class HomeComponent {
         'Developing cutting-edge software solutions across web, mobile, and enterprise applications with a focus on scalability and innovation.',
     },
     {
-      icon: '/assets/robotics-icon.svg', 
+      icon: '/assets/robotics-icon.svg',
       paragraph1: 'Robotics',
       paragraph2:
         'Building next-generation robotics systems for automation, manufacturing, and advanced industrial applications.',
@@ -410,7 +410,7 @@ export class HomeComponent {
       icon: '/assets/rocket-icon.svg',
       paragraph1: 'Rockets',
       paragraph2:
-        'Pioneering space technology through advanced propulsion systems and launch vehicle development for India\'s space ambitions.',
+        "Pioneering space technology through advanced propulsion systems and launch vehicle development for India's space ambitions.",
     },
     {
       icon: '/assets/energy-icon.svg',
@@ -459,24 +459,31 @@ export class HomeComponent {
     }
 
     // Your WhatsApp number
-    const phoneNumber = '918248495900';
-    
+    const phoneNumber = '+918248495913';
+
     // Format the message for WhatsApp
     const message = `New Contact Form Submission\n\nName: ${this.formData.name}\nEmail: ${this.formData.email}\nPhone: ${this.formData.phone}\nMessage: ${this.formData.message}`;
-    
+
     // Save to Firestore
     this.addLead(this.formData);
-    
+
     // Send to WhatsApp using the WhatsApp Business API
-    fetch(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`, {
-      method: 'GET',
-      mode: 'no-cors'
-    }).then(() => {
-      window.alert('Form submitted successfully! We will contact you soon.');
-    }).catch(error => {
-      console.error('Error sending message:', error);
-      window.alert('Form submitted. We will get back to you shortly.');
-    });
+    fetch(
+      `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+        message
+      )}`,
+      {
+        method: 'GET',
+        mode: 'no-cors',
+      }
+    )
+      .then(() => {
+        window.alert('Form submitted successfully! We will contact you soon.');
+      })
+      .catch((error) => {
+        console.error('Error sending message:', error);
+        window.alert('Form submitted. We will get back to you shortly.');
+      });
 
     // Clear the form
     this.formData = {

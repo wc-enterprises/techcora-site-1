@@ -1,3 +1,5 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M25 2C12.85 2 3 11.85 3 24C3 36.15 12.85 46 25 46C37.15 46 47 36.15 47 24C47 11.85 37.15 2 25 2ZM35 26H15C13.9 26 13 25.1 13 24C13 22.9 13.9 22 15 22H35C36.1 22 37 22.9 37 24C37 25.1 36.1 26 35 26Z" fill="#A78BFA"/>
-</svg>
+ <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">                                         
+     <path d="M40 15V10H35V5H15V10H10V15H5V35H10V40H15V45H35V40H40V35H45V15H40ZM25 35C20.05 35 16 30.95 16 26C16 21.05 20.05 17 25       
+ 17C29.95 17 34 21.05 34 26C34 30.95 29.95 35 25 35Z" fill="#A78BFA"/>                                                                   
+     <circle cx="25" cy="26" r="4" fill="#A78BFA"/>                                                                                      
+ </svg>  
