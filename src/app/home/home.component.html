@@ -66,7 +66,7 @@
         <div class="aboutus-content" #aboutusContent>
           <span
             >We are building a group of world-changing companies from India — in
-            Softwares, Robotics, Rockets, and Energy. Our vision i rooted in
+            Softwares, Robotics, Rockets, and Energy. Our vision is rooted in
             India's rich legacy of innovation and excellence, from the Indus
             Valley Civilization to the Maratha Empire.</span
           >
@@ -111,7 +111,7 @@
             </div>
             <div class="stat-item">
               <h3>30hrs</h3>
-              <p>Student Internships</p>
+              <p>Part-Time Weekly</p>
             </div>
             <div class="stat-item">
               <h3>100hrs</h3>
@@ -141,12 +141,12 @@
             <h3>Equity Partnership</h3>
             <p>
               Top contributors become equity partners through our 12-year equity
-              plan, with 5-10% equity release every 4 years.
+              plan, with 2-4% equity release every 4 years.
             </p>
 
             <h3>Referral Program</h3>
             <p>
-              Earn ₹50,000 to ₹1,00,000 for referring exceptional talent who
+              Earn ₹20,000 to ₹1,00,000 for referring exceptional talent who
               joins our mission full-time.
             </p>
           </div>
@@ -157,7 +157,7 @@
     <!-- Growth & Timeline -->
     <div class="growth-timeline" id="growth" #growthSection>
       <div class="section-container">
-        <h2><span>Growth</span> & Timeline</h2>
+        <h2><span>Growth</span> & Timeline 2025</h2>
 
         <div class="growth-targets">
           <div class="target-item">
@@ -219,64 +219,8 @@
     </div>
 
     <!-- Contact -->
-    <div class="contactus" id="contact" #contactSection>
-      <div class="contact-form" #contactContainer>
-        <div class="contact-form-header">
-          <span class="contact-form-head" #contactHead> <a>CONTACT</a> US</span>
-          <span class="contact-form-subhead" #contactSubHead
-            >Send our team a message below and we will get back to you.</span
-          >
-        </div>
-
-        <form (ngSubmit)="submitForm()" #quoteForm="ngForm" #contactForm>
-          <div class="form-group">
-            <div class="form-field">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your Name*"
-                [(ngModel)]="formData.name"
-              />
-              <span *ngIf="isFieldInvalid('name')">{{ alert.name }}</span>
-            </div>
-            <div class="form-field">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Your Email*"
-                [(ngModel)]="formData.email"
-              />
-              <span *ngIf="isFieldInvalid('email')">{{ alert.email }}</span>
-            </div>
-            <div class="form-field">
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                placeholder="Your Phone Number*"
-                [(ngModel)]="formData.phone"
-              />
-              <span *ngIf="isFieldInvalid('phone')">{{ alert.phone }}</span>
-            </div>
-            <div class="form-field">
-              <textarea
-                id="message"
-                name="message"
-                required
-                placeholder="Your Message*"
-                [(ngModel)]="formData.message"
-              ></textarea>
-              <span *ngIf="isFieldInvalid('message')">{{ alert.message }}</span>
-            </div>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+    <div class="contact" id="contact" #contactSection>
+      <h3>Contact Us</h3>
 
       <div class="contact-info-container" #contactInfo>
         <div *ngFor="let box of infoData" class="contact-info-box">

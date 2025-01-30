@@ -531,6 +531,89 @@ button[type="submit"]:hover {
   align-self: stretch;
 }
 
+.contact {
+  display: flex;
+  width: 100vw;
+  padding: 80px 100px;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  gap: 40px;
+}
+
+.contact h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.64px;
+  text-align: center;
+}
+
+.contact-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 30px;
+  padding: 20px;
+}
+
+.contact-info-box {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 12px;
+  background: rgba(167, 139, 250, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-info-box:hover {
+  transform: translateY(-5px);
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.contact-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.contact-head p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-detail-box p {
+  color: #a78bfa;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+  
+  .contact-info-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-box {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 426px) {
   .hero-container {
     padding: 20px 20px;
