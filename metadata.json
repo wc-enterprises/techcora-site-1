@@ -1,0 +1,7 @@
+{
+  "name": "Techcora",
+  "description": "Techcora - LITS (Lead India To Supremacy). A deep tech company building world-changing products in Softwares, Robotics, Rockets, and Energy.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
